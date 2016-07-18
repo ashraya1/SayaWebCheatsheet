@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Workshop - Lecture: Variables</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</head>
+<body>
+<div class="container">
+<div class="container-inner">
+
+  <div class="left-sidebar">
+    <div class="home-anchor">
+       <h3><a href="index.html">Web Development Crash Course</a></h3>
+    </div>
+    <div class="navigation-links">
+      <div class="navigation-link-item"><a href="activity-logging.html">Activity: Logging</a></div>
+      <div class="navigation-link-item"><a href="lecture-variables.html">Lecture: Variables</a></div>
+      <div class="navigation-link-item"><a href="activity-variables.html">Activity: Variables</a></div>
+      <div class="navigation-link-item"><a href="lecture-arrays.html">Lecture: Arrays</a></div>
+      <div class="navigation-link-item"><a href="activity-arrays.html">Activity: Arrays</a></div>
+      <div class="navigation-link-item"><a href="lecture-conditionals.html">Lecture: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="activity-conditionals.html">Activity: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="assignment-webproposal.html">Assignment: Web App Proposal</a></div>
+      <div class="navigation-link-item"><a href="lecture-loops.html">Lecture: Loops</a></div>
+      <div class="navigation-link-item"><a href="activity-arraysadvanced.html">Activity: Arrays (Advanced)</a></div>
+      <div class="navigation-link-item"><a href="lecture-functions.html">Lecture: Functions</a></div>
+      <div class="navigation-link-item"><a href="activity-functions.html">Activity: Functions</a></div>
+      <div class="navigation-link-item"><a href="activity-fizzbuzz.html">Activity: Fizz Buzz</a></div>
+      <div class="navigation-link-item"><a href="practiceproblems.html">Practice Problems</a></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Lecture: Variables</h1>
+    
+    <h2>What is a Variable?</h2>
+    
+    <p>
+      A good analogy is a <b>labeled box</b>. Outside is the label, inside is something, and it could be anything!
+    </p>
+    <img width="500px" src="http://2.bp.blogspot.com/-guGunS9ljms/Ui-sF7Q9yQI/AAAAAAAAACU/DdnRgAARYyI/s1600/box.png"/>
+    <div class="image-label">(Stolen from Khan Academy)</div>
+    
+    <p>
+      Officially:
+      A variable is a <b>container</b>. It has both a <b>name</b> and a <b>value</b>. You <b>declare</b> a new variable with the <code>var</code> keyword, and <b>assign</b> it (aka give it) a value with the <code>=</code> sign.
+    </p>
+    <pre><code>var variableOne = 1
+var variableTwo = "Two"
+var bensFavLanguage = "JavaScript"
+console.log("Ben's favorite language is: " + bensFavLanguage)
+// Ben's favorite language is: JavaScript</code></pre>
+    <p>
+      In JavaScript the <b>value</b> of a variable can change, but the name cannot.
+      However, you can assign variables with values from other variables.
+    </p>
+    
+    <pre><code>var bensFavLanguage = "JavaScript"
+var studentsFavLanguage = "French"
+console.log("Student's favorite language was " + studentsFavLanguage)
+// Student's favorite language was French
+
+// .... after this lecture ....
+studentsFavLanguage = bensFavLanguage
+console.log("Student's favorite language was " + studentsFavLanguage)
+// Student's favorite language was JavaScript</code></pre>
+
+    <p>
+      Notice how in the code snippet above our second <code>console.log</code> statement is identical to the first <code>console.log</code> statement but the output is drastically different since the value of the var <code>studentsFavLanguage</code> has changed. In general, after having declared a new variable, it can be used and reused as many times as you want.
+    </p>
+   
+    <p>
+      As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often.
+    </p>
+
+    <h2>Variable Types</h2>
+    <p>
+        What's the difference between:
+    </p>     
+    <pre><code>var label = "Do Not Disturb"
+// and
+var distance = 100</code></pre>
+    <p>
+        The short answer is this: the first, <code>var label</code> is a <b>string</b> whereas the second, <code> var distance</code> is a <b>number</b>. In JavaScript, variables may have different <b>types</b> and each type of variable is used to represent a specific group of data.
+    </p>
+    <h3>Numbers</h3>
+    <p>
+      <b>Numbers</b> are what you would expect them to be in the real world &mdash; numerical values that can be added, subtracted, multiplied, divided, etc. 
+    </p>
+    <pre><code>// Examples
+var radius = 5
+var g = 9.81 // decimals count as numbers
+var piAsFraction = 22 / 7 // this is computed and stored as 3.142857142857143
+</code></pre>
+
+    <p>
+      We use the arithmetic (<code>+,-,*,/</code>) operators on numbers to do useful things like calculate someone's age or convert temperatures from fahrenheit to celsius. 
+    </p>
+
+    <p>
+      Let's look at some examples.
+    </p>
+
+    <pre><code>// Examples
+
+// calculating the circumference of a circle
+var radius = 5
+var PI = 3.14
+
+// QUESTION: does the value of `PI` or `r` change after this operation?
+console.log( 2 * PI * radius )
+
+// converting F -> C
+var F = 82
+// notice how parenthesis can be used for order of operations
+var C = ( F - 32 ) / 1.8
+
+// QUESTION: what is stored inside the `C` variable?
+console.log( C )
+</code></pre>
+
+    <p>
+    (Optional) <b>Challenge</b>: can you write an expression using variables that will take our <code>C</code> value and convert it back to the fahrenheit scale?
+    </p>
+
+    <h3>Strings</h3>
+    <p>
+        A <b>string</b> can be used to represent words and sentences. Anything wrapped in quotations (either double or single) will be represented as a <b>string</b> in javascript (even if the thing in quotes is a number).
+    </p> 
+    <p>
+        <b>Most</b> arithmetic operators (<code>-,*,/</code>) do not work with strings. The <code>+</code> operator can be used to "add" or <b>concatenate</b> strings together.
+    </p>
+    <p>
+        Let's see this in action.
+    </p>
+    <pre><code>
+var name = "John" // double quotes, this is string
+var lastName = 'Smith' // SINGLE quotes, still string
+var fullName = name + " " + lastName // John Smith
+// notice how the '+' in this case combines three strings into one string
+
+var stillAString = "2" // this is still a string since wrapped in quotes
+
+var invalid = "John Smith' // NOTE: the quote TYPES mismatch, not kosher
+</code></pre>
+
+    <p><b>Question</b>: what would happen if you pasted the <code>var invalid = "John Smith'</code> into repl.it? </p>
+
+    <h2>Good Variable Names</h2>
+
+    <p>
+      Having good variable names is super important for you and others reading your code. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Cased" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
+    </p>
+    <p>
+      You want your names to be as concise and as clear as possible. Being able to reason about what data is in a variable in the middle of a big and complicated program is important both for yourself and for when you share code. <b>You will read more code than you will write as a programmer</b>.
+    </p>
+    
+    <h3>Best Practices</h3>
+    <p>
+      Variable names <b>can</b> contain:
+      <ul>
+        <li>letters</li>
+        <li>numbers</li>
+        <li>underscores</li>
+        <li>dollar signs</li>
+      </ul>
+    </p>
+    <p>
+      Variable names <b>cannot</b> contain:
+      <ul>
+        <li>spaces</li>
+        <li>dashes</li>
+        <li>periods</li>
+      </ul>
+    </p>
+    <p>
+      Your variable names <b>cannot start with a number</b>, however you may choose to start your variable names with letters (lowercased or uppercased based on your discretion), underscores, or dollar signs. 
+    </p>
+
+    <p>Here are some examples of bad and better variable names.</p>
+    <pre><code>// BAD variable names
+var 3.14isPi // can't start with number, can't have periods
+var hello everyone! // space and '!' not allowed
+var this-is-also-not-kosher-as-a-variable-name-for-use-later
+// has dashes, OPINION: too long, concise names are better
+
+// BETTER variable names
+var pi // all lower cased, simple and succinct 
+var helloEveryone // 'camel cased': individual words are capitalized
+var listOfAllUniqueNames // describes the type of data inside: a list
+var orderedListOfPrimeNumbers // describes the type and the organization: a sorted list
+    </code></pre>
+
+    <h2>Evaluation / Execution of code</h2>
+    <p>
+      The word we use to describe turning a set of code into a single value is called <b>evaluate</b> or <b>execute</b>. This is useful to think about in situations where we assign the result of some math to a variable:
+    </p>
+    <pre><code>var x = 10
+var y = 20
+var someVariable = (100 * x / y) - x*y
+x = 0
+y = 0
+console.log(someVariable)
+// -150</code></pre>
+    <p>
+      The value of some variable is decided at the moment of assignment when that line of code gets <b>executed</b> and the <b>expression</b> on the right side of the assignment gets <b>evaluated</b>.
+    </p>
+
+    <h2>Useful and important syntax</h2>    
+    <pre><code class="javascript">var someNumber = 0
+var x = 5 // We'll use this later
+
+//Increment: take a value and increase it by 1
+someNumber = someNumber + 1
+someNumber += 1 // This and the above line can be any number
+someNumber++
+++someNumber
+
+//Decrement: take a value and decrease it by 1
+someNumber = someNumber - 1
+someNumber -= 1 // This and the above line can be any number
+someNumber--
+--someNumber
+
+//Multiply: take a value and multiply it by x
+someNumber = someNumber * x
+someNumber *= x
+
+//Divide: take a value and divide it by x
+someNumber = someNumber / x
+someNumber /= x
+</code></pre>
+    
+    <p>
+      (Optional) <b>Challenge</b>: what is the value of <code>someNumber</code> at the end of the above code snippet? Walk through each line of code and try to compute the value of <code>someNumber</code> yourself. Then, paste the snippet above into repl.it to check your answer.
+    </p>
+    
+  </div>
+    
+</div>
+</div>
+</body>
+</html>

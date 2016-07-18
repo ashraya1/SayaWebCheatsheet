@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Activity: Variables</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</head>
+<body>
+<div class="container">
+<div class="container-inner">
+
+  <div class="left-sidebar">
+    <div class="home-anchor">
+      <h3><a href="index.html">Web Development Crash Course</a></h3>
+    </div>
+    <div class="navigation-links">
+      <div class="navigation-link-item"><a href="activity-logging.html">Activity: Logging</a></div>
+      <div class="navigation-link-item"><a href="lecture-variables.html">Lecture: Variables</a></div>
+      <div class="navigation-link-item"><a href="activity-variables.html">Activity: Variables</a></div>
+      <div class="navigation-link-item"><a href="lecture-arrays.html">Lecture: Arrays</a></div>
+      <div class="navigation-link-item"><a href="activity-arrays.html">Activity: Arrays</a></div>
+      <div class="navigation-link-item"><a href="lecture-conditionals.html">Lecture: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="activity-conditionals.html">Activity: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="assignment-webproposal.html">Assignment: Web App Proposal</a></div>
+      <div class="navigation-link-item"><a href="lecture-loops.html">Lecture: Loops</a></div>
+      <div class="navigation-link-item"><a href="activity-arraysadvanced.html">Activity: Arrays (Advanced)</a></div>
+      <div class="navigation-link-item"><a href="lecture-functions.html">Lecture: Functions</a></div>
+      <div class="navigation-link-item"><a href="activity-functions.html">Activity: Functions</a></div>
+      <div class="navigation-link-item"><a href="activity-fizzbuzz.html">Activity: Fizz Buzz</a></div>
+      <div class="navigation-link-item"><a href="practiceproblems.html">Practice Problems</a></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Activity: Variables</h1>
+    
+    <p>
+      Let's create:
+    </p>
+    <ul>
+      <li>A variable called `helloWrold` <i>(this is called "camel cased")</i></li>
+      <li>A variable called `hiMyNameIs`</li>
+      <li>A variable called `this_is_snake_cased`</li>
+      <li>A variable called `thisVarHasNumbers111`</li>
+      <li>A variable called `$this$var$has$dollarsigns`</li>
+      <li>A variable containing letters, numbers, dashes, and underscores</li>
+      <li>Let's try to <b>break</b> JavaScript: make some variables that error out! Do you see the error message in repl.it, what does it say?</li>
+    </ul>
+
+    <p>
+      Use <code>console.log(myVariable)</code> to print out each variable to the console. You can also prepend it with a string and use the <code>+</code> operator to squish them together (the fancy name for that is to <b>concatenate</b> or <b>join</b> them together).
+    </p>
+    
+    <pre><code>console.log("The value of [something] is " + someVariable)</code></pre>
+    
+    <p>
+      <b>NOTE:</b> If the value of the variable is NOT a String and you try and concatenate it with a string, JavaScript will do a nice thing and convert it to a String for you. <i>However this can be dangerous</i>, JavaScript is not very smart and might convert it incorrectly. This might not be an issue for simple examples, but consider yourself warned!
+    </p>
+    
+    <p>
+      Now create a variable containing for each of the following:
+    </p>
+    <ul>
+      <li>Your name</li>
+      <li>Your age</li>
+      <li>Your favorite food</li>
+      <li>Your favorite film, book, or tv show (or one for each!)</li>
+    </ul>
+
+    <h2>Pair with your neighbor: Which of these variables are correct, and which are incorrect?</h2>
+
+    <pre><code>var myVariableName
+var biggestPartyEver!
+var even bigger party
+var smallest-party-ever
+var medium$sized$party
+var iLoveLearning@C4Q
+var javascript_is_the_best
+var tweet#C4Q
+var _tweetC4Q
+var ThreeTimesThree
+var 3Times3
+var ThreeTimes3
+var 3TimesThree
+</code></pre>
+
+    <h2>Math (Expressions)</h2>
+    
+    <p>
+      You can do math on variables too as long as they are numbers! Let's find out your birth year by subtracting your age (let's use the variable you defined earlier) from the current year:
+    </p>
+    
+    <pre><code>var currentYear = 2016
+var myBirthYear = currentYear - myAge
+console.log("My birth year is " + myBirthYear)</code></pre>
+    
+    
+    <p>
+      It can get quite a bit more complicated:
+    </p>
+    
+    <pre><code>var companyRevenue = 1000000
+var officeRent = 250000
+var employeeSalary = 75000
+var numberOfEmployees = 4
+var taxRate = 0.4
+var profit = (companyRevenue - officeRent - employeeSalary * numberOfEmployees) * taxRate
+console.log("Profit this year was " + profit)</code></pre>
+   
+    <p>
+      Try changing the values like the rent, or the number of employees, and see how profit changes. This is why programming is so powerful!
+    </p>
+
+    
+    
+  </div>
+
+</div>
+</div>
+</body>
+</html>
